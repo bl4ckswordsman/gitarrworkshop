@@ -8,7 +8,7 @@
       xmlns:p="http://primefaces.org/ui">
 <head>
     <title>My Application</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
     <link rel="stylesheet" href="#{request.contextPath}/assets/styles.css"/>
     <link rel="stylesheet" href="#{request.contextPath}/resources/css/bootstrap.min.css"/>
     <script type="text/javascript" src="https://www.google.com/jsapi"> </script><!-- Google Charts -->
@@ -22,37 +22,37 @@
     <h:outputScript library="js" name="bootstrap.bundle.min.js" target="head"/> -->
 </head>
 <body>
-<div class="d-flex">
-    <!-- Sidebar for mobile -->
-    <div class="d-md-none">
-        <button class="btn btn-light text-dark border border-secondary m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
-            &#9776; <!-- Unicode character for hamburger icon -->
-        </button>
-    </div>
-
-    <!-- Sidebar for desktop -->
-    <div class="d-none d-md-block vh-100">
-        <div class="bg-dark text-white h-100 fs-5">
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar for desktop -->
+        <div class="col-md-3 d-none d-md-block bg-dark text-white vh-100 position-sticky" style="top: 0; width: 150px;">
             <div class="d-flex flex-column h-100 p-2">
                 <ui:include src="nav-items.xhtml"/>
             </div>
         </div>
-    </div>
 
-    <!-- Offcanvas Sidebar for mobile -->
-    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar" data-bs-toggle="offcanvas">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title"> </h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"> </button>
-        </div>
-        <div class="offcanvas-body">
-            <ui:include src="nav-items.xhtml"/>
+        <!-- Content area -->
+        <div class="col-md-9 col-12">
+            <!-- Hamburger button for mobile -->
+            <div class="d-md-none">
+                <button class="btn btn-light text-dark border border-secondary m-2" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+                    &#9776; <!-- Unicode character for hamburger icon -->
+                </button>
+            </div>
+            <ui:insert name="content"/>
         </div>
     </div>
+</div>
 
-    <!-- Content area -->
-    <div class="flex-grow-1">
-        <ui:insert name="content"/>
+<!-- Offcanvas Sidebar for mobile -->
+<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar" data-bs-toggle="offcanvas">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ui:include src="nav-items.xhtml"/>
     </div>
 </div>
 </body>

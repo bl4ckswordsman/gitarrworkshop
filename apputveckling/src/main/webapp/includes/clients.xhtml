@@ -13,7 +13,7 @@
 
 
 
-<div class="container-fluid history_div m-4 p-4 w-75">
+<div class="container-fluid p-4 m-3 history_div" style="width: 95%;">
     <h3>History</h3>
     <hr/>
     <div class="row">
@@ -163,18 +163,16 @@
                     </div>
                 </ui:repeat>
 
-
             </div>
 
         </div>
-
 
     </div>
 
 </div>
 
 <h:form id="form">
-    <div class="container-fluid p-4 m-4 w-75 Medlemmar">
+    <div class="container-fluid p-4 m-2 Medlemmar">
         <p class="text-muted">Number of clients: #{clientBean.clients.size()}</p>
         <label for="search_bar">Medlemmar:</label><br></br>
         <input type="text" id="search_bar" name="fname" value="Sök namn"/>
