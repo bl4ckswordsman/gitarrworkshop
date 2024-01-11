@@ -1,4 +1,4 @@
-# Anders's Guitarr Workshop
+# Anders's Guitar Workshop
 Project work for the course Application Development in Java - DT142G (Mid Sweden University)
 
 ## Project Abstract
@@ -6,7 +6,7 @@ This project is a website developed in Java to a fictional business owned by a f
 
 ## [Payara configuration guide](./apputveckling/src/main/resources/misc/Payara_configuration_guide.md)
 
-The project contributers are:
+## Project contributors:
 - Nasir A. (nasiralizade)
 - Johannes J. (JohannesJoujo)
 - Isaac K. (isaac1209)
